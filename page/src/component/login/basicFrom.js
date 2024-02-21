@@ -18,45 +18,55 @@ export const BasicFrom = () => {
     event.preventDefault();
     const newEntry = { email: email, password: password };
     setAllEntry([...AllEntry, newEntry]);
-    console.log(AllEntry);}
-
-    return (
-      <>
-        <form action="" onSubmit={submitForm} className="loginpage">
-          <div className="email">
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              autoComplete="on"
-              value={email}
-              onChange={handleEmailChange}
-            ></input>
-          </div>
-          <div className="password">
-            <label htmlFor="password">Password</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              autoComplete="on"
-              value={password}
-              onChange={handlePasswordChange}
-            ></input>
-          </div>
-          <div className="login">
-            <button type="login">Login</button>
-          </div>
-          <div>
-            <button type="login">Sign Up</button>
-          </div>
-          <div>
-            
-          </div>
-        </form>
-      </>
-    );
+    console.log(AllEntry);
   };
+
+  return (
+    <>
+      <form action="" onSubmit={submitForm} className="loginpage">
+        <div className="email">
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            autoComplete="on"
+            value={email}
+            onChange={handleEmailChange}
+          ></input>
+        </div>
+        <div className="password">
+          <label htmlFor="password">Password</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            autoComplete="on"
+            value={password}
+            onChange={handlePasswordChange}
+          ></input>
+        </div>
+        <div className="login">
+          <button type="login">Login</button>
+        </div>
+        <div>
+          <button type="login">Sign Up</button>
+        </div>
+      </form>
+      <div>
+            {
+              AllEntry.map((entry, index) => {
+                return (
+                  <div key={index} className="list">
+                    <p>Email: {entry.email}</p>
+                    <p>Password: {entry.password}</p>
+                  </div>
+                );
+              })
+            }
+          </div>
+    </>
+  );
+};
 
 export default BasicFrom

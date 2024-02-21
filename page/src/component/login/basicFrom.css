@@ -21,13 +21,17 @@
     margin: 2px;
 }
 
-.login {
-    
+.login {}
 
 
-    
-    
+.list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
 
-
-
+.list p {
+    margin: 5px 0;
 }
