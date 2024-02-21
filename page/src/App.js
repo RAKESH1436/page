@@ -1,20 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginForm from './LoginPages';
+import BasicFrom from './component/login/basicFrom';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>LOGIN PAGE
-          <LoginForm></LoginForm>
-        </p>
-        
-       
-      </header>
+     <BasicFrom/>
     </div>
   );
 }
