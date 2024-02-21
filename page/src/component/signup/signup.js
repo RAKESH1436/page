@@ -1,27 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-export const signup = () => {
+const Signup = () => {
   return (
-    <div><form action="">
-        <div className='sign'>
-        <div className="name" >
+    <div>
+      <form className="signup-form" action="">
+        <div className="form-group">
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name"></input>
+          <input type="text" id="name" name="name" />
         </div>
         <div className="email">
           <label htmlFor="email">Email</label>
-          <input type="text" name="email" id="email"></input>
+          <input type="email" id="email" name="email" />
         </div>
-         <div className="password" >
-          <label htmlFor="email">Password</label>
-          <input type="text" name="Password" id="Password"></input>
+        <div className="pass">
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" name="password" />
         </div>
         <div className="role">
-          <label htmlFor="password">Role</label>
-          <input type="text" name="Role" id="Role"></input>
+          <label htmlFor="role">Role</label>
+          <input type="text" id="role" name="role" />
         </div>
-        </div>
-    </form></div>
-  )
-}
-export default signup
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  );
+};
+
+export default Signup;
