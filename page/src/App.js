@@ -5,10 +5,13 @@ import BasicFrom from './component/login/basicFrom';
 
 
 
+
 function App() {
   return (
     <div className="App">
      <BasicFrom/>
+     
+     
     </div>
   );
 }

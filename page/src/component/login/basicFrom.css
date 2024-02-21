@@ -1,20 +1,33 @@
-.loginpage{
+.loginpage {
     margin: 20%;
     box-shadow: 5px 2px 25px rgb(224, 14, 14);
     padding: 5%;
     width: 50%;
     background-color: rgb(119, 189, 189);
 }
-.email{
-   border-color: rgb(161, 17, 17);
-   font-size: 20px;
-   padding: 5px;
-   margin: 2px;
+
+.email {
+    border-color: rgb(161, 17, 17);
+    font-size: 20px;
+    padding: 5px;
+    margin: 2px;
 
 }
-.password{
+
+.password {
     width: 635px;
     border-color: rgb(161, 17, 17);
     font-size: 20px;
     margin: 2px;
+}
+
+.login {
+    
+
+
+    
+    
+
+
+
 }
