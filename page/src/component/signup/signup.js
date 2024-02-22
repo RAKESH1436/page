@@ -75,24 +75,17 @@ const Signup = () => {
         <button type="submit">Sign Up</button>
       </form>
       <div>
-        {
-          record.map((list)=>{
-            return(
-              <div className="list" key={list.id}>
-              <p>Email: {list.name}</p>
+        {record.map((list) => {
+          return (
+            <div className="list" key={list.id}>
+              <p>NAME: {list.name}</p>
               <p>Email: {list.email}</p>
-              <p>Email: {list.password}</p>
-              <p>Email: {list.role}</p>
-              
-
-
-              </div>
-            )
-          }
-          )
-        }
+              <p>PASSWORD: {list.password}</p>
+              <p>ROLE: {list.role}</p>
+            </div>
+          );
+        })}
       </div>
-      
     </div>
   );
 };
