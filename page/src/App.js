@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import BasicFrom from './component/login/basicFrom';
+import Signup from './component/signup/signup';
 
 
 
@@ -9,7 +10,7 @@ import BasicFrom from './component/login/basicFrom';
 function App() {
   return (
     <div className="App">
-     <BasicFrom/>
+     <Signup/>
      
      
     </div>
