@@ -2,37 +2,44 @@ import React, { useState } from "react";
 import "./signup.css";
 
 const Signup = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+  const [userRegistration, setUserRegistration] = useState({
+    name: "",
+    email: "",
+    password: "",
+    role: "",
+  });
 
-  const handlename = (event) => {
-    setName(event.target.value);
+  const [record, setRecords] = useState([]);
+
+  const handleInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    console.log(name, value);
+    setUserRegistration({ ...userRegistration, [name]: value });
   };
 
-  const handleemail = (event) => {
-    setEmail(event.target.value);
-  };
-  const handlepassword = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handlerole = (event) => {
-    setRole(event.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newRecord = {
+      ...userRegistration,
+      id: new Date().getTime().toString(),
+    };
+    setRecords([...record, newRecord]);
+    console.log(record);
+    setUserRegistration({ name: "", email: "", password: "", role: "" });
   };
 
   return (
     <div>
-      <form className="signup-form" action="">
+      <form className="signup-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={name}
-            onChange={handlename}
+            value={userRegistration.name}
+            onChange={handleInput}
           />
         </div>
         <div className="email">
@@ -41,8 +48,8 @@ const Signup = () => {
             type="email"
             id="email"
             name="email"
-            value={email}
-            onChange={handleemail}
+            value={userRegistration.email}
+            onChange={handleInput}
           />
         </div>
         <div className="pass">
@@ -51,8 +58,8 @@ const Signup = () => {
             type="password"
             id="password"
             name="password"
-            value={password}
-            onChange={handlepassword}
+            value={userRegistration.password}
+            onChange={handleInput}
           />
         </div>
         <div className="role">
@@ -61,8 +68,8 @@ const Signup = () => {
             type="text"
             id="role"
             name="role"
-            value={role}
-            onChange={handlerole}
+            value={userRegistration.role}
+            onChange={handleInput}
           />
         </div>
         <button type="submit">Sign Up</button>
